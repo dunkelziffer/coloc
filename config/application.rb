@@ -9,5 +9,6 @@ module Coloc
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.autoload_paths << "#{root}/app/forms"
+    config.autoload_paths << "#{root}/app/power"
   end
 end

@@ -64,12 +64,16 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:description, :done)
+    params.require(:task).permit(*TasksPower.permitted_params)
   rescue ActionController::ParameterMissing  
     {}
   end
 
   def task_scope
-    TasksForm.all
+    if action_name.in? ['index', 'show']
+      TasksPower.visible
+    else
+      TasksPower.editable
+    end
   end
 end
