@@ -8,7 +8,6 @@ module Coloc
     config.load_defaults 8.0
     config.autoload_lib(ignore: %w[assets tasks])
 
-    config.autoload_paths << "#{root}/app/forms"
-    config.autoload_paths << "#{root}/app/power"
+    config.autoload_paths << "#{root}/app/resources"
   end
 end

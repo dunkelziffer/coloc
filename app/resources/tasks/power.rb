@@ -1,10 +1,10 @@
-class TasksPower < ApplicationPower
+class Tasks::Power < ApplicationPower
   def self.visible
-    TasksForm.all
+    Tasks::Form.all
   end
 
   def self.editable
-    TasksForm.all
+    Tasks::Form.all
   end
 
   def self.permitted_params
