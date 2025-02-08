@@ -1,24 +1,9 @@
-# README
+# A proposal for a resource-oriented file structure for Rails applications
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Did it ever bother you that Rails sorts files by "type" and not by "namespace"?
+- Did you notice that Rails' naming convention `appends` the "type" to the file, making it the least significant part of the file name.
+- So from Ruby's perspective, files should actually already be sorted by "namespace".
+- Rails does a lot of work (aka `zeitwerk`) to create this separation by "type".
+- We are free to simply ignore that.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Take a look at [`app/resources/`](https://github.com/dunkelziffer/coloc/tree/main/app/resources) and this [commit](https://github.com/dunkelziffer/coloc/commit/6ba592e03e156dcc722a16787350d2910ada0052)!
