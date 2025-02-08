@@ -1,4 +1,4 @@
-class TasksController < ApplicationController
+class Tasks::Controller < ApplicationController
 
   def index
     load_tasks
