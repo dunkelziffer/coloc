@@ -70,6 +70,6 @@ class TasksController < ApplicationController
   end
 
   def task_scope
-    Task.all
+    TasksForm.all
   end
 end
