@@ -1,5 +1,4 @@
 class Tasks::Controller < ApplicationController
-
   def index
     load_tasks
   end
@@ -16,11 +15,11 @@ class Tasks::Controller < ApplicationController
     build_task
 
     if @task.save
-      flash[:notice] = 'Task was successfully created'
+      flash[:notice] = "Task was successfully created"
       redirect_to @task
     else
       render Tasks::NewView, status: :unprocessable_entity
-    end  
+    end
   end
 
   def edit
@@ -33,7 +32,7 @@ class Tasks::Controller < ApplicationController
     build_task
 
     if @task.save
-      flash[:notice] = 'Task was successfully updated'
+      flash[:notice] = "Task was successfully updated"
       redirect_to @task
     else
       render Tasks::EditView, status: :unprocessable_entity
@@ -41,10 +40,10 @@ class Tasks::Controller < ApplicationController
   end
 
   def destroy
-    load_task    
-    
+    load_task
+
     @task.destroy!
-    flash[:notice] = 'Task was successfully destroyed'
+    flash[:notice] = "Task was successfully destroyed"
     redirect_to :tasks
   end
 
@@ -65,12 +64,12 @@ class Tasks::Controller < ApplicationController
 
   def task_params
     params.require(:task).permit(*Tasks::Power.permitted_params)
-  rescue ActionController::ParameterMissing  
+  rescue ActionController::ParameterMissing
     {}
   end
 
   def task_scope
-    if action_name.in? ['index', 'show']
+    if action_name.in? [ "index", "show" ]
       Tasks::Power.visible
     else
       Tasks::Power.editable

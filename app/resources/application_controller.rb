@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   layout -> { ApplicationLayout }
 
   def self.controller_path
-    super&.delete_suffix('/')
+    super&.delete_suffix("/")
   end
 end

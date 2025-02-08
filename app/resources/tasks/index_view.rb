@@ -6,7 +6,7 @@ class Tasks::IndexView < ApplicationView
 
     div(class: "w-full") {
       if notice.present?
-        p(id: "notice", class: "py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block") { 
+        p(id: "notice", class: "py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block") {
           notice
         }
       end

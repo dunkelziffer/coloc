@@ -8,6 +8,6 @@ class Tasks::Power < ApplicationPower
   end
 
   def self.permitted_params
-    [:description, :done]
+    [ :description, :done ]
   end
 end

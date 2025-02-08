@@ -28,12 +28,12 @@ class Tasks::FormPartial < Phlex::HTML
 
       div(class: "my-5") {
         form.label :description
-        form.text_field :description, class: ["block shadow-sm rounded-md border outline-hidden px-3 py-2 mt-2 w-full", feedback_classes(task.errors[:description])]
+        form.text_field :description, class: [ "block shadow-sm rounded-md border outline-hidden px-3 py-2 mt-2 w-full", feedback_classes(task.errors[:description]) ]
       }
 
       div(class: "my-5") {
         form.label :done
-        form.checkbox :done, class: ["block shadow-sm rounded-md border outline-hidden mt-2 h-5 w-5", feedback_classes(task.errors[:done])]
+        form.checkbox :done, class: [ "block shadow-sm rounded-md border outline-hidden mt-2 h-5 w-5", feedback_classes(task.errors[:done]) ]
       }
 
       div(class: "inline") {
