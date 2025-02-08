@@ -44,6 +44,8 @@ gem "thruster", require: false
 
 
 gem "active_type"
+gem "phlex-rails"
+gem "phlexible"
 
 
 group :development, :test do

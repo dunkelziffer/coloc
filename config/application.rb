@@ -9,5 +9,8 @@ module Coloc
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.autoload_paths << "#{root}/app/resources"
+    config.autoload_paths << "#{root}/app/components"
+    config.autoload_paths << "#{root}/app/views"
+    config.autoload_paths << "#{root}/app/views/layouts"
   end
 end
