@@ -197,7 +197,7 @@ GEM
     phlex-rails (1.2.2)
       phlex (>= 1.10, < 2)
       railties (>= 6.1, < 9)
-    phlexible (2.1.0)
+    phlexible (2.2.0)
       phlex (>= 1.10.0, < 2.0.0)
       phlex-rails (>= 1.2.1, < 2.0.0)
     pp (0.6.2)
